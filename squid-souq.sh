@@ -8,7 +8,7 @@ meta_1=`cat osc_$1.json | jq '.osv.meta_data_filename' | tr -d \"`
 metadata_url="http://openstreetcam.org/$meta_1"
 metadata_url2=`curl -s $metadata_url | grep href | awk -F\" '{print $2}'`
 echo $metadata_url2
-curl -s $metadata_url2 -o osc_$1_metadata.csv
+curl -s $metadata_url2 -o osc_$1_sensorData.csv
 count=0
 accel_X_tot=0
 accel_Y_tot=0
@@ -21,7 +21,7 @@ lng_tot=0
 centroid_lat=0
 centroid_lng=0
 echo "SQUID-URL,StreetID,Centroid_Latitude,Centroid_Longitude,SQUID_Score" >>osc_$1.csv
-for i in $(tail -n +2 osc_$1_metadata.csv)
+for i in $(tail -n +2 osc_$1_sensorData.csv)
 do
  meta_lng=`echo $i | awk -F";" '{print $2}'`
  meta_lat=`echo $i | awk -F";" '{print $3}'`
@@ -54,7 +54,8 @@ do
   #echo $geonames_url
   from_before=$from
   #curl -s $geonames_url | /home/ubuntu/node_modules/xml2json/bin/xml2json | jq '.geonames.streetSegment[2]'
-  geoname_txt=`curl -s $geonames_url | /home/ubuntu/node_modules/xml2json/bin/xml2json | jq '.geonames.streetSegment[2]'`
+  #geoname_txt=`curl -s $geonames_url | /home/ubuntu/node_modules/xml2json/bin/xml2json | jq '.geonames.streetSegment[2]'`
+  geoname_txt=`curl -s $geonames_url | xml2json | jq '.geonames.streetSegment[2]'`
   #echo $geoname_txt
   from=`echo $geoname_txt | jq '.fraddr' | tr -d \"`
 
