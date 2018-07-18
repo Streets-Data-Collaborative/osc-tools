@@ -1,6 +1,6 @@
 # osc-tools
 
-[**osc-parse.sh**](https://github.com/Streets-Data-Collaborative/osc-tools/blob/master/osc-parse.sh "osc-parse.sh") download's all the files for a specific OSC track_id.
+[**osc-parse.sh**](https://github.com/Streets-Data-Collaborative/osc-tools/blob/master/osc-parse.sh "osc-parse.sh") downloads all the files for a specific OSC track_id.
 
 Requirements: 
 - [jq](https://stedolan.github.io/jq/)
@@ -68,7 +68,11 @@ Outputs:
  - Centroid of the line segment.
  - SQUID score that represents the underlying accelerometer data.
 
-This script uses the geonames service to calculate Street Segment IDs
+Limitations:
+Currently works for only the [metadata file with the header format version 1.1.6](https://github.com/openstreetcam/openstreetview.org/issues/109)
+
+timestamp;longitude;latitude;elevation;horizontal_accuracy;GPSspeed;yaw;pitch;roll;accelerationX;accelerationY;accelerationZ;pressure;compass;videoIndex;tripFrameIndex;gravityX;gravityY;gravityZ;OBD2speed;vertical_accuracy
+
 
 Requirements:
 - [jq](https://stedolan.github.io/jq/)
