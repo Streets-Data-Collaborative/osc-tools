@@ -80,7 +80,7 @@ Usage:
 ./squid-souq.sh 123456
 ```
 Outputs:
-osc_123456.csv - The parsed file
-osc_123456.json - Raw Output
-osc_123456_sensorData.csv - Raw Output
+- osc_123456.csv - The parsed file
+- osc_123456.json - Raw Output
+- osc_123456_sensorData.csv - Raw Output
 
