@@ -1,7 +1,14 @@
 # osc-tools
 
-[**osc-parse.sh**](https://github.com/Streets-Data-Collaborative/osc-tools/blob/master/osc-parse.sh "osc-parse.sh") downloads all the files for a specific OSC track_id.
+- [**osc-parse.sh**](https://github.com/Streets-Data-Collaborative/osc-tools/blob/master/osc-parse.sh "osc-parse.sh") downloads all the files for a specific OSC track_id.
 
+- [**osc-accel-parse.ipynb**](https://github.com/Streets-Data-Collaborative/osc-tools/blob/master/osc-accel-parse.ipynb) parses the OSC sensor readings file aka metadata file and outputs a csv with moth location and bumpiness readings
+
+- [**squid-souq.sh**](https://github.com/Streets-Data-Collaborative/osc-tools/blob/master/squid-souq.sh "squid-souq.sh") accepts a track-id and integrates the point  & sensor data for a single track id to output a simple csv 
+
+---
+
+[**osc-parse.sh**](https://github.com/Streets-Data-Collaborative/osc-tools/blob/master/osc-parse.sh "osc-parse.sh")
 Requirements: 
 - [jq](https://stedolan.github.io/jq/)
 
