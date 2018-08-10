@@ -1,7 +1,7 @@
 # OSC GIF
 ![](https://github.com/Streets-Data-Collaborative/osc-tools/blob/master/osc-gif/osc_482413.gif)
 
-Makes GIFs from Open Street Cam Tracks
+Makes GIFs from [Open Street Cam](http://www.openstreetmap.org/) Tracks
 
 ## Requirements
 
