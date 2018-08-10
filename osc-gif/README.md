@@ -4,10 +4,10 @@ Makes GIFs from Open Street Cam Tracks
 
 ## Requirements
 
-jq
+[jq](https://github.com/stedolan/jq)
 
 ## Usage
 
-./osc-gif.sh <OSC-track-id>
+`./osc-gif.sh <OSC-track-id>`
 
 
