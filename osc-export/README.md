@@ -15,6 +15,6 @@ Big thanks to the original authors of the osc-gif scripts, those helped a lot.
 
 Put that in `osc-export-track.sh`.
 
-2. In a browser, run `[...document.links].map(l => l.href).filter((a_url) => a_url.startsWith("https://openstreetcam.org/details")).toString()` and put the output (including quotes in the URLs) in the `URLs` variable in `osc-export-account.sh`. (An example is provided in that file.)
+2. In Firefox, while you're logged into your OSC account, in the console, run `[...document.links].map(l => l.href).filter((a_url) => a_url.startsWith("https://openstreetcam.org/details")).toString()` and put the output (including quotes in the URLs) in the `URLs` variable in `osc-export-account.sh`. (An example is provided in that file.)
 
 3. In a terminal, type `chmod +x osc-export-account.sh` and run `./osc-export-account.sh`. Wait about 2 hours for the whole thing to finish depending on your internet speed and how many images you have uploaded to your account.
